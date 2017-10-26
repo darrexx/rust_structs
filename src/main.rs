@@ -1,9 +1,15 @@
 fn main() {
-    let user = build_user(String::from("example@example.com"), String::from("exampleuser"));
-    let color = Color(255,255,255);
-    println!("{:?}", user);
-    println!("{:?}", color);
+    let rect1 = Rectangle { length: 50, width: 30 };
+
+    println!("rect1 is {:?}", rect1);
 }
+
+#[derive(Debug)]
+struct Rectangle {
+    length: u32,
+    width: u32,
+}
+
 
 fn build_user(email: String, username: String) -> User {
     User {
